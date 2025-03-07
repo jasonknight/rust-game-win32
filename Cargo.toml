@@ -1,0 +1,33 @@
+[package]
+name = "win32_platform"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+anyhow="1.0"
+libloading="0.8"
+clap = { version = "4.5.3", features = ["derive"] }
+fermium = "22605.0.0"
+libc="0.2"
+engine={ path = "../engine" }
+maplit = "1.0.2"
+lazy_static="1.4"
+serde = { version = "1.0", features = ["derive"] }
+tokei = "12.1.2"
+imgui-rs = "1.47.0"
+glow = "0.13.1"
+imgui = "0.11.0"
+memoffset = "0.9.1"
+
+
+[dependencies.windows-sys]
+version = "0.52"
+features = [
+    "Win32_Foundation",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_ColorSystem",
+    "Win32_Graphics_Gdi",
+    "Win32_System_Performance",
+    "Win32_Media",
+]
